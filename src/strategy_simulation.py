@@ -19,8 +19,6 @@ CONFIG = {
 }
 
 
-# --- Strategy Signal Generation ---
-# --- Buy and Hold Strategy (No need for prediction) ---
 def generate_buy_and_hold_positions(data):
     """
     Generates positions for a simple Buy and Hold strategy.
@@ -41,7 +39,6 @@ def generate_buy_and_hold_positions(data):
     
     return positions
 
-# --- Long-short strategy ---
 def generate_long_short_positions(predictions):
     """
     Generates positions directly from the model's prediction signals.
@@ -61,7 +58,7 @@ def generate_long_short_positions(predictions):
     positions[short_condition] = -1
     return positions
 
-# --- Long-only strategy ---
+
 def generate_long_only_positions(predictions):
     """
     Generates positions directly from the model's prediction signals.
@@ -81,7 +78,7 @@ def generate_long_only_positions(predictions):
     # positions[short_condition] = 0
     return positions
 
-# --- trend_following_overlay ---
+
 def generate_trend_following_positions(data, predictions):
     """
     Generates positions by filtering primary signals with a long-term trend.
@@ -125,7 +122,6 @@ def generate_trend_following_positions(data, predictions):
 
 
 
-# --- Vectorized Backtesting Engine ---
 def run_vectorized_backtest(price_data: pd.DataFrame, positions: pd.Series) -> pd.Series:
     """
     Runs a vectorized backtest on a set of price data and position signals.
