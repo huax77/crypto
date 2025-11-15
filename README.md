@@ -1,5 +1,8 @@
-This project was originally developed collaboratively with Xiaochuan and Ke.
-This fork focuses on my part of work.
+#  Acknowledgements
+- This project was originally developed as part of a collaborative effort with Xiaochuan and Ke. 
+- The code and analysis in this repository represent the parts that I personally implemented and maintain, including the XGBoost and LSTM models, and data preprocessing and backtesting pipelines.
+- Some shared experimental results and figures are included for completeness.
+
 
 #  Cryptocurrency Price Forecasting and Strategy Backtesting
 ## Forecasting Price Movements with Predictive Modeling
