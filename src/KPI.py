@@ -2,15 +2,13 @@ import pandas as pd
 import numpy as np
 import os
 
-# --- Module 1: Configuration ---
-# Centralized dictionary for all trading and backtesting parameters.
-# This makes it easy to adjust settings without changing the core logic.
+# config: trading and backtesting parameters.
 CONFIG = {
     'risk_free_rate': 0.0
 }
 
 
-# --- Module 2: Performance Metrics Calculation ---
+# metrics
 def calculate_performance_metrics(returns_series: pd.Series, freq: str = '1H') -> dict:
     """Calculates performance metrics based on a series of returns."""
     if returns_series.empty:
